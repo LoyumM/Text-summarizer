@@ -8,7 +8,7 @@ data source : [source](https://huggingface.co/datasets/samsum)
 - Update params.yaml
 - Update entity
 - Update the configuration manager in src config
-- Update the conponents
+- Update the components
 - Update the pipeline
 - Update the main.py
 - Update the app.py
