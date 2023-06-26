@@ -1,3 +1,5 @@
+# BASE CODE: THIS WORKS!
+
 from fastapi import FastAPI
 import uvicorn
 import sys
@@ -26,9 +28,6 @@ async def training():
     except Exception as e:
         return Response(f"Error Occurred! {e}")
     
-
-
-
 @app.post("/predict")
 async def predict_route(text):
     try:
@@ -39,6 +38,38 @@ async def predict_route(text):
     except Exception as e:
         raise e
     
-
 if __name__=="__main__":
     uvicorn.run(app, host="0.0.0.0", port=8080)
+
+
+
+
+
+
+# ## TRIAL 1:
+
+# from fastapi import FastAPI, Request, Form
+# from fastapi.templating import Jinja2Templates
+# from starlette.responses import RedirectResponse
+# from textSummarizer.pipeline.prediction import PredictionPipeline
+
+# app = FastAPI()
+# templates = Jinja2Templates(directory="templates")
+# pipeline = PredictionPipeline()
+
+# @app.get("/", tags=["authentication"])
+# async def index(request: Request):
+#     return RedirectResponse(url="/docs")
+
+# @app.post("/predict")
+# async def predict_route(request: Request, text: str = Form(...)):
+#     try:
+#         obj = PredictionPipeline()
+#         output = obj.predict(text)
+#         return templates.TemplateResponse("result.html", {"request": request, "summary": output})
+#     except Exception as e:
+#         raise e
+
+# if __name__ == "__main__":
+#     import uvicorn
+#     uvicorn.run(app, host="0.0.0.0", port=8080)
