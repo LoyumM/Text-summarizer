@@ -38,6 +38,11 @@ This can also be run offline. To do so, follow the steps below:
 
 `pip install -r requirements.txt`
 
+#### Download the model and unzip
+
+- [Google drive link](https://drive.google.com/uc?export=download&id=15eD9fj2bJwH5Vg7mt1uXCdkO_Eb0OgiH)
+- Unzip and move the file to: artifacts\model_trainer
+
 #### Run the application
 
 `streamlit run streamlit.py`

@@ -28,11 +28,11 @@ def predict_route(text):
 
 st.title("Text summarizer")
 
-para = st.text_area("Enter paragraph")
-summary = st.button("Summarize")
-
 load_files(model_url, "artifacts\model_trainer\pegasus-samsum-model-new.7z")
 unzip_7zip(file_path, output_dir)
+
+para = st.text_area("Enter paragraph")
+summary = st.button("Summarize")
 
 if summary:
     st.subheader("Summary:")
