@@ -45,4 +45,4 @@ This can also be run offline. To do so, follow the steps below:
 
 #### Run the application
 
-`streamlit run streamlit.py`
+`streamlit run streamlit_local.py`

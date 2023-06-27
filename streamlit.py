@@ -10,7 +10,7 @@ output_dir = "artifacts\model_trainer"
 def download_file(url, output_path):
     gdown.download(url, output_path, quiet=False)
 
-@st.cache_data     
+# @st.cache_data     
 def load_files(url, filename):
     download_file(url, filename)
     
